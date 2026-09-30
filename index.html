@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevPulse | Cloud Telemetry for Engineering Teams</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="#hero" class="brand-logo" aria-label="DevPulse Home Page">
+        <span class="logo-icon">&#x25C9;</span> DevPulse
+      </a>
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#estimator" class="nav-link">Workload Estimator</a>
+        <a href="#register" class="btn btn-sm btn-primary"
+          >Deploy Free Cluster</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero-section">
+        <span class="badge-pill"
+          >New: auto-remediation for Kubernetes nodes</span
+        >
+        <h1 class="hero-title">
+          See every node, log, and latency spike in one place
+        </h1>
+        <p class="hero-subtitle">
+          DevPulse collects metrics and logs from your clusters, alerts you when
+          something drifts, and can restart unhealthy services before your users
+          notice.
+        </p>
+        <div class="cta-group">
+          <a href="#register" class="btn btn-primary btn-lg"
+            >Deploy Free Cluster</a
+          >
+          <a href="#pricing" class="btn btn-secondary btn-lg">View Pricing</a>
+        </div>
+      </section>
+
+      <section id="features" class="section-container">
+        <header class="section-header">
+          <h2 class="section-title">Features</h2>
+          <p class="section-subtitle">
+            Three tools that replace the dashboards you check at 3 a.m.
+          </p>
+        </header>
+        <div class="features-grid">
+          <article class="feature-card">
+            <span class="feature-icon">&#x23F1;</span>
+            <h3 class="feature-title">Latency Tracking</h3>
+            <p class="feature-desc">
+              p50, p95, and p99 response times per service, sampled every 10
+              seconds and kept for 30 days.
+            </p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">&#x2261;</span>
+            <h3 class="feature-title">Log Aggregation</h3>
+            <p class="feature-desc">
+              Logs from every node land in one searchable stream, grouped by
+              cluster, service, and severity.
+            </p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">&#x21BB;</span>
+            <h3 class="feature-title">Auto-Remediation</h3>
+            <p class="feature-desc">
+              Write a rule once and DevPulse restarts or drains the failing node
+              for you, then posts what it did to your team channel.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="pricing" class="section-container">
+        <header class="section-header">
+          <h2 class="section-title">Cluster Pricing</h2>
+          <p class="section-subtitle">
+            Start free, then pay per monitored node as you grow.
+          </p>
+        </header>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3 class="tier-name">Developer</h3>
+            <p class="tier-desc">For side projects and staging clusters</p>
+            <p class="tier-price">
+              <span class="price-val">$0</span>
+              <span class="price-unit">/ month</span>
+            </p>
+            <ul class="tier-features">
+              <li>Up to 3 nodes</li>
+              <li>7-day log retention</li>
+              <li>Email alerts</li>
+            </ul>
+            <a href="#register" class="btn btn-outline btn-block"
+              >Deploy Developer</a
+            >
+          </article>
+
+          <article class="pricing-card featured">
+            <div class="popular-tag">Most Popular</div>
+            <h3 class="tier-name">Pro Cluster</h3>
+            <p class="tier-desc">
+              For production teams with an on-call rotation
+            </p>
+            <p class="tier-price">
+              <span class="price-val">$12</span>
+              <span class="price-unit">/ node / month</span>
+            </p>
+            <ul class="tier-features">
+              <li>Up to 250 nodes</li>
+              <li>30-day log retention</li>
+              <li>Slack and PagerDuty alerts</li>
+              <li>Auto-remediation rules</li>
+            </ul>
+            <a href="#register" class="btn btn-primary btn-block"
+              >Deploy Pro Cluster</a
+            >
+          </article>
+
+          <article class="pricing-card">
+            <h3 class="tier-name">Enterprise Dedicated</h3>
+            <p class="tier-desc">For regulated or very large fleets</p>
+            <p class="tier-price">
+              <span class="price-val">Custom</span>
+            </p>
+            <ul class="tier-features">
+              <li>Up to 1,000 nodes per cluster</li>
+              <li>1-year log retention</li>
+              <li>Single-tenant infrastructure</li>
+              <li>Named support engineer</li>
+            </ul>
+            <a href="#register" class="btn btn-outline btn-block"
+              >Contact Sales</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section id="estimator" class="section-container form-section">
+        <header class="section-header">
+          <h2 class="section-title">Workload Estimator</h2>
+          <p class="section-subtitle">
+            Enter your cluster size to see which tier fits.
+          </p>
+        </header>
+
+        <form action="#pricing" method="get" class="lead-form">
+          <div class="form-group">
+            <label for="node-count" class="form-label"
+              >Node Count <span class="required-mark">*</span></label
+            >
+            <input
+              type="number"
+              name="nodeCount"
+              id="node-count"
+              class="form-control"
+              min="1"
+              max="1000"
+              step="1"
+              placeholder="24"
+              required
+            />
+            <span class="input-hint">Min: 1 - Max: 1,000 nodes</span>
+          </div>
+
+          <div class="form-group">
+            <label for="log-throughput" class="form-label"
+              >Log Throughput (GB per day)
+              <span class="required-mark">*</span></label
+            >
+            <input
+              type="number"
+              name="logThroughput"
+              id="log-throughput"
+              class="form-control"
+              min="1"
+              max="1000"
+              step="1"
+              placeholder="50"
+              required
+            />
+            <span class="input-hint">Min: 1 - Max: 1,000 GB</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            Check Tier Compatibility
+          </button>
+        </form>
+      </section>
+
+      <section id="register" class="section-container form-section">
+        <header class="section-header">
+          <h2 class="section-title">API Sandbox Registration</h2>
+          <p class="section-subtitle">
+            Instant provisioning. No credit card required.
+          </p>
+        </header>
+
+        <form action="#registration-confirmed" method="get" class="lead-form">
+          <div class="form-group">
+            <label for="work-email" class="form-label"
+              >Work Email <span class="required-mark">*</span></label
+            >
+            <input
+              type="email"
+              name="workEmail"
+              id="work-email"
+              class="form-control"
+              placeholder="you@company.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="company-name" class="form-label"
+              >Company Name <span class="required-mark">*</span></label
+            >
+            <input
+              type="text"
+              name="companyName"
+              id="company-name"
+              class="form-control"
+              placeholder="Acme Robotics"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="cluster-tier" class="form-label"
+              >Target Cluster Tier</label
+            >
+            <select name="clusterTier" id="cluster-tier" class="form-control">
+              <option value="developer">Developer ($0 monthly)</option>
+              <option value="pro" selected>Pro Cluster ($12 per node)</option>
+              <option value="enterprise">Enterprise Dedicated (custom)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            Generate Sandbox Credentials
+          </button>
+        </form>
+
+        <p id="registration-confirmed" class="form-success">
+          Request received. Your sandbox credentials will be sent to your work
+          email in a few minutes.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-copy">&copy; 2026 DevPulse Inc. Demo for CSI 3150F26</p>
+      <nav class="footer-links" aria-label="Footer Navigation Links">
+        <a href="#hero">Back to Top</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+    </footer>
+  </body>
+</html>
