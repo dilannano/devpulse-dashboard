@@ -478,3 +478,39 @@ section {
     font-size: 2.25rem;
   }
 
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .section-container {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .features-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .lead-form {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+}
